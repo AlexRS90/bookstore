@@ -1,0 +1,9 @@
+.navbar-main {
+  display: flex;;
+}
+
+.navbar-main ul {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
