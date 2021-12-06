@@ -28,7 +28,7 @@ const DisplayBook = () => {
             <option>Aciton</option>
             <option>Races</option>
           </select>
-          <input type="submit" value="Add Book" onClick={() => setBook(book=>[...book])} />
+          <input type="submit" value="Add Book" onClick={() => setBook((book) => [...book])} />
         </form>
       </section>
     </div>
