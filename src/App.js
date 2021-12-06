@@ -6,14 +6,14 @@ import Books from './components/bookReact';
 import Categories from './redux/categories/categories';
 
 const App = () => (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/Categories" element={<Categories />} />
-      </Routes>
-    </>  
-    
-  );
+  <>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Books />} />
+      <Route path="/Categories" element={<Categories />} />
+    </Routes>
+  </>
+
+);
 
 export default App;
