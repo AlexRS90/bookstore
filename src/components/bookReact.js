@@ -1,36 +1,40 @@
 import React, { useState } from 'react';
-
-const dummyBooks = [
-  {
-    id: 123,
-    title: 'This is a book title',
-    auhor: 'Alex',
-  },
-];
+import Books from './books';
+import AddNewBook from './addBook';
 
 const DisplayBook = () => {
-  const [book, setBook] = useState(dummyBooks);
+  const [book] = useState(Books);
+  const ulMenu = {
+    display: 'flex',
+    listStyle: 'none',
+    gap: '20px',
+    alignItems: 'center',
+  };
+  const deleteButton = {
+    border: '2px solid teal',
+    padding: '5px',
+    cursor: 'pointer',
+  }
+  const wrapper = {
+    border: '2px solid grey',
+    marginBottom: '10px',
+  }
   return (
     <div>
       <section>
-        <p>{book[0].title}</p>
-        <ul>
-          <li>Comments</li>
-          <li>Remove</li>
-          <li>Edit</li>
-        </ul>
+        {book.map((book) => (
+          <div key={book.id} style={wrapper}>
+            <p>Title: {book.title}</p>
+            <p>Author: {book.author}</p>
+            <ul style={ulMenu}>
+              <li>Comments</li>
+              <li style={deleteButton}>Remove</li>
+              <li>Edit</li>
+            </ul>
+          </div>
+        ))}
       </section>
-      <section>
-        <form>
-          <h2>Add a new book</h2>
-          <input type="text" placeholder="Book Title" />
-          <select name="Categories">
-            <option>Aciton</option>
-            <option>Races</option>
-          </select>
-          <input type="submit" value="Add Book" onClick={() => setBook((book) => [...book])} />
-        </form>
-      </section>
+      <AddNewBook />
     </div>
   );
 };
