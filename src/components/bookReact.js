@@ -14,18 +14,24 @@ const DisplayBook = () => {
     border: '2px solid teal',
     padding: '5px',
     cursor: 'pointer',
-  }
+  };
   const wrapper = {
     border: '2px solid grey',
     marginBottom: '10px',
-  }
+  };
   return (
     <div>
       <section>
         {book.map((book) => (
           <div key={book.id} style={wrapper}>
-            <p>Title: {book.title}</p>
-            <p>Author: {book.author}</p>
+            <p>
+              Title:
+              {book.title}
+            </p>
+            <p>
+              Author:
+              {book.author}
+            </p>
             <ul style={ulMenu}>
               <li>Comments</li>
               <li style={deleteButton}>Remove</li>
