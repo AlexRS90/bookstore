@@ -4,7 +4,7 @@
 
 > Track your lectures.
 
-![screenshot](ssInitialize.png)
+![screenshot](ssRefactor.png)
 
 ### Milestone 1:
  - Followed git-flow
