@@ -4,12 +4,20 @@
 
 > Track your lectures.
 
-![screenshot](ssRefactor.png)
+![screenshot](ssAddDelete.png)
 
 ### Milestone 1:
  - Followed git-flow
  - Added linters
  - Created <code>my-app</code> React App
+### Milestone 2:
+ - Coded redux store in configureStore.js
+ - Added bundles to manage books state and reducers and actions at books.js
+ - Followed ducks pattern
+ - Added functionality to add a new book to redux state with useDispatch hook
+ - Displayed new books from redux state with useSelector hook
+ - Added functionality to remove a single book from redux state with useDispatch hook
+ - Added logger to track all actions.
  
 ## Built With
 
