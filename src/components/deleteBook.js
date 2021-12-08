@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
-const DeleteButton = ({id}) => {
+const DeleteButton = ({ id }) => {
   const dispatch = useDispatch();
   return (
     <div>
@@ -13,7 +13,7 @@ const DeleteButton = ({id}) => {
 };
 
 DeleteButton.prototype = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.node.isRequired,
 };
 
 export default DeleteButton;
