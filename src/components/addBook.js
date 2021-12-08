@@ -1,7 +1,19 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
-import { v4 as uuidv4 } from "uuid";
+
+const submitBookToStore = (e, dispatch) => {
+  e.preventDefault();
+  const newBook = {
+    id: uuidv4(),
+    title: document.getElementById('book-title').value,
+    author: document.getElementById('book-author').value,
+  };
+  document.getElementById('book-title').value = '';
+  document.getElementById('book-author').value = '';
+  dispatch(addBook(newBook));
+};
 
 const AddNewBook = () => {
   const dispatch = useDispatch();
@@ -20,18 +32,6 @@ const AddNewBook = () => {
       </form>
     </section>
   );
-};
-
-const submitBookToStore = (e, dispatch) => {
-  e.preventDefault();
-  const newBook = {
-    id: uuidv4(),
-    title: document.getElementById('book-title').value,
-    author: document.getElementById('book-author').value,
-  }
-  document.getElementById('book-title').value = '';
-  document.getElementById('book-author').value = '';
-  dispatch(addBook(newBook));
 };
 
 export default AddNewBook;
