@@ -14,7 +14,7 @@ const DeleteButton = (props) => {
 };
 
 DeleteButton.prototype = {
-  props: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default DeleteButton;
