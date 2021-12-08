@@ -4,7 +4,7 @@ import AddNewBook from './addBook';
 import DeleteButton from './deleteBook';
 
 const DisplayBook = () => {
-  const bookStore = useSelector((state) => state.books);
+  const bookStore = useSelector((state) => state.book.books);
   const ulMenu = {
     display: 'flex',
     listStyle: 'none',
