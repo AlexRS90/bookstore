@@ -12,7 +12,7 @@ const DeleteButton = ({ id }) => {
   );
 };
 
-DeleteButton.protoTypes = {
+DeleteButton.propTypes = {
   id: PropTypes.string.isRequired,
 };
 
