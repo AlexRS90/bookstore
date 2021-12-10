@@ -18,6 +18,13 @@
  - Displayed new books from redux state with useSelector hook
  - Added functionality to remove a single book from redux state with useDispatch hook
  - Added logger to track all actions.
+### Milestone 3:
+ - Installed Axios and Thunks 🍭
+ - Added Async functions to use middleware
+ - Connected to the API
+  - Get data 📚 from the API
+  - Post new books in the API 📖
+  - Delete books from the API 🚫
  
 ## Built With
 
