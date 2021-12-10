@@ -87,7 +87,7 @@ body {
   cursor: pointer;
   border: none;
   background: none;
-  font-family: RobotoSlab;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
