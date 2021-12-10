@@ -4,7 +4,7 @@
 
 > Track your lectures.
 
-![screenshot](ssAddDelete.png)
+![screenshot](ssFinal.png)
 
 ### Milestone 1:
  - Followed git-flow
@@ -25,6 +25,8 @@
   - Get data 📚 from the API
   - Post new books in the API 📖
   - Delete books from the API 🚫
+### Milestone 4:
+ - Added styles
  
 ## Built With
 
