@@ -35,19 +35,19 @@ export const addBook = (newBook) => ({
   payload: newBook,
 });
 
-export const addBookAsync = ({ id, title, category}) => {
+export const addBookAsync = ({ id, title, category }) => {
   return (dispatch) => {
     axios.post(url, {
       item_id: id,
       title,
       category,
     })
-    .then((response) => {
-      if (response.status === 201) {
-        dispatch(addBook({id, title, category}))
-      }
-    });
-  }
+      .then((response) => {
+        if (response.status === 201) {
+          dispatch(addBook({ id, title, category }));
+        }
+      });
+  };
 };
 
 export const removeBook = (id) => ({
@@ -60,9 +60,8 @@ export const removeBookAsync = (id) => {
     axios.delete(`${url}/${id}`, {
       item_id: id,
     }).then(dispatch(removeBook(id)));
-  }
+  };
 };
-
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {

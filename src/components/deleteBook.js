@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBookAsync} from '../redux/books/books';
+import { removeBookAsync } from '../redux/books/books';
 
 const DeleteButton = ({ id }) => {
   const dispatch = useDispatch();

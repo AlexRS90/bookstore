@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import AddNewBook from './addBook';
 import DeleteButton from './deleteBook';
@@ -7,8 +7,8 @@ import { fetchBooks } from '../redux/books/books';
 const DisplayBook = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-      dispatch(fetchBooks());
-  },[]);
+    dispatch(fetchBooks());
+  }, []);
   const ulMenu = {
     display: 'flex',
     listStyle: 'none',
