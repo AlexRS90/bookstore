@@ -4,7 +4,7 @@ const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 const FETCH_BOOK = 'FETCH_BOOK';
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1aYtBbFkwky6xIiVSTwv/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/1aYtBbFkwky6xIiVSTwv/';
 
 const initialState = {
   books: [],
@@ -16,8 +16,9 @@ const displayBooks = (book) => ({
 });
 
 export const fetchBooks = () => {
+  const apiURL = `${url}books`;
   return (dispatch) => {
-    axios.get(url)
+    axios.get(apiURL)
       .then((response) => {
         const { data } = response;
         const books = [];
@@ -36,8 +37,9 @@ export const addBook = (newBook) => ({
 });
 
 export const addBookAsync = ({ id, title, category }) => {
+  const apiURL = `${url}books`;
   return (dispatch) => {
-    axios.post(url, {
+    axios.post(apiURL, {
       item_id: id,
       title,
       category,
@@ -55,9 +57,10 @@ export const removeBook = (id) => ({
   payload: id,
 });
 
-export const removeBookAsync = (id) => {
+export const removeBookAsync = (identify) => {
+  const id = identify;
   return (dispatch) => {
-    axios.delete(`${url}/${id}`, {
+    axios.delete(`${url}books/${id}`, {
       item_id: id,
     }).then(dispatch(removeBook(id)));
   };
