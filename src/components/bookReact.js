@@ -33,7 +33,7 @@ const DisplayBook = () => {
               </ul>
             </div>
             <div className="progress">
-              <div className="circle"></div>
+              <div className="circle" />
               <div>
                 <p className="percentage">75%</p>
                 <p className="progress-text">Completed</p>
@@ -42,7 +42,7 @@ const DisplayBook = () => {
             <div className="update-progress">
               <p className="current-chap">CURRENT CHAPTER</p>
               <p className="chapter">Chapter 8</p>
-              <button className="update-button">UPDATE PROGRESS</button>
+              <button type="button" className="update-button">UPDATE PROGRESS</button>
             </div>
           </div>
         ))}

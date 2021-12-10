@@ -22,20 +22,20 @@ body {
 }
 
 .category {
-    opacity: 0.5;
-    font-family: 'Montserrat';
-    font-size: 0.875rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #121212;
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
 }
 
 .title {
   margin: 0;
-  font-family: 'RobotoSlab';
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 1.375rem;
   font-weight: bold;
   font-stretch: normal;
@@ -47,7 +47,7 @@ body {
 
 .author {
   margin-top: 5px;
-  font-family: RobotoSlab;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -69,7 +69,7 @@ body {
   width: 4.563rem;
   height: 1.188rem;
   margin: 0.188rem 0.938rem 0.125rem 0;
-  font-family: RobotoSlab;
+  font-family: 'RobotoSlab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
@@ -115,13 +115,13 @@ body {
   border-bottom: 5px solid #4386bf;
   border-left: 5px solid #c4c4c4;
   border-radius: 50%;
-  -moz-border-radius:50%;
-  -webkit-border-radius:50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
   transform: rotate(45deg);
 }
 
 .percentage {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   font-weight: normal;
   font-stretch: normal;
@@ -134,7 +134,7 @@ body {
 
 .progress-text {
   opacity: 0.5;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
