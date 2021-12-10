@@ -1,10 +1,14 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, {useEffect} from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import AddNewBook from './addBook';
 import DeleteButton from './deleteBook';
+import { fetchBooks } from '../redux/books/books';
 
 const DisplayBook = () => {
-  const bookStore = useSelector((state) => state.book.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+      dispatch(fetchBooks());
+  },[]);
   const ulMenu = {
     display: 'flex',
     listStyle: 'none',
@@ -20,6 +24,7 @@ const DisplayBook = () => {
     border: '2px solid grey',
     marginBottom: '10px',
   };
+  const bookStore = useSelector((state) => state.book.books);
   return (
     <div>
       <section>
@@ -30,8 +35,8 @@ const DisplayBook = () => {
               {book.title}
             </p>
             <p>
-              Author:
-              {book.author}
+              Category:
+              {book.category}
             </p>
             <ul style={ulMenu}>
               <li>Comments</li>
